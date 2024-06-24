@@ -10,6 +10,11 @@
     --accent-cl-200: #404bbf;
     --light-cl:  #ffffff;
     --dark-cl: #434455;
+
+    /* Others */
+    --line-height: line-height: 1.5;
+    --letter-spacing: letter-spacing: 0.02em;
+
 }
 
 /* #region Base styles */
@@ -22,6 +27,8 @@ body {
 ul,
 ol {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 address {
@@ -37,6 +44,7 @@ button {
   font-family: inherit;
   color: currentColor;
   cursor: pointer;
+  text-decoration: none;
 }
 /* #endregion */
 
@@ -51,8 +59,21 @@ button {
     text-align: center;
     color: var(--primary-cl);
 }
-
 /* #endregion */
+
+/* #region Header */
+.header > .container {
+  display: flex;
+  align-items: center;
+}
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+  /*   outline: 2px solid red; */
+}
+/* #endregion */
+
 
 /* #region Logo */
 .logo {
@@ -63,6 +84,7 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-cl-100);
+  margin-right: 76px;
 }
 
 .logo-dark {
@@ -75,11 +97,25 @@ button {
 /* #endregion */
 
 /* #region Navigation */
+.header-nav{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+} 
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .nav-menu-link {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-cl);
+  display: block;
+  padding: 24px 0;
 }
 
 .nav-menu-link:hover,
@@ -87,10 +123,17 @@ button {
     color: var(--accent-cl-200);
 }
 
-.contacts-link {
+.header-contacts {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+
+  .contacts-link {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--dark-cl);
+  padding: 24px 0;
+}
 }
 
 .contacts-link:hover, 
