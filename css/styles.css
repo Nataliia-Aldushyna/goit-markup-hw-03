@@ -70,7 +70,6 @@ button {
   max-width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
-  /*   outline: 2px solid red; */
 }
 /* #endregion */
 
@@ -85,14 +84,14 @@ button {
   text-transform: uppercase;
   color: var(--accent-cl-100);
   margin-right: 76px;
-}
 
-.logo-dark {
+  .logo-dark {
   color: var(--primary-cl);
 }
 
 .logo-light {
   color: var(--secondary-cl);
+}
 }
 /* #endregion */
 
