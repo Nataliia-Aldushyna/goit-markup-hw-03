@@ -68,8 +68,8 @@ button {
 }
 .container {
   max-width: 1158px;
-  margin: 0 auto;
   padding: 0 15px;
+  margin: 0 auto;
 }
 /* #endregion */
 
@@ -99,8 +99,9 @@ button {
 .header-nav{
   display: flex;
   align-items: center;
+  /* gap: 76px; */
   flex-grow: 1;
-} 
+}
 
 .nav-menu {
   display: flex;
@@ -125,14 +126,21 @@ button {
 .header-contacts {
   display: flex;
   align-items: center;
-  gap: 40px;
+}
 
-  .contacts-link {
+.contacts-list {
+  display: flex;
+  gap: 40px; 
+}
+.contacts-item {
+  display: inline-block;
+}
+
+a.contacts-link {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--dark-cl);
   padding: 24px 0;
-}
 }
 
 .contacts-link:hover, 
@@ -143,10 +151,13 @@ button {
 
 /* #region Hero*/
 .hero {
+    padding: 188px 0;
     background: var(--primary-cl);
 }
 
 .hero-title {
+    max-width: 496px;
+    margin: 0 auto 48px; 
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
@@ -154,7 +165,15 @@ button {
     color: var(--light-cl);
 }
 
+.hero-btn{
+  margin: 0 auto;
+}
+
 .btn {
+    display: flex;
+    min-width: 169px;
+    min-height: 56px;
+    padding: 16px 32px; 
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
@@ -169,6 +188,10 @@ button {
 /* #endregion */
 
 /* #region Features */
+.features {
+    padding-bottom: 60px;
+}
+
 .features-caption {
     font-weight: 500;
     font-size: 20px;
