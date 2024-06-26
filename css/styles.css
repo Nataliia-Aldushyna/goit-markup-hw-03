@@ -23,6 +23,15 @@ body {
   color: var(--dark-cl);
   background-color: var(--light-cl);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 
 ul,
 ol {
@@ -52,12 +61,17 @@ button {
 .team-title,
 .portfolio-title,
 .features-title {
+    margin-bottom: 72px;
     font-size: 36px;
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     text-align: center;
     color: var(--primary-cl);
+}
+
+.section {
+    padding: 120px 0;
 }
 /* #endregion */
 
@@ -212,8 +226,14 @@ a.contacts-link {
     background-color: var(--secondary-cl);
 }
 
-.team-item {
-  background-color: var(--light-cl);
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.team-wrapper {
+    padding: 32px 16px;
 }
 
 .team-member {
@@ -251,7 +271,12 @@ a.contacts-link {
 
 /* #region Footer */
 .footer {
+  padding: 100px 0;
     background: var(--primary-cl);
+}
+
+.footer-left {
+    max-width: 264px;
 }
 
 .footer-slogan {
