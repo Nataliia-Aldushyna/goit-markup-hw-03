@@ -73,6 +73,29 @@ button {
 .section {
     padding: 120px 0;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+/* .cards-item {
+    width: 
+} */
 /* #endregion */
 
 /* #region Header */
@@ -207,6 +230,7 @@ a.contacts-link {
 }
 
 .features-caption {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -224,12 +248,6 @@ a.contacts-link {
 /* #region Team */
 .team {
     background-color: var(--secondary-cl);
-}
-
-.cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
 }
 
 .team-wrapper {
@@ -271,12 +289,17 @@ a.contacts-link {
 
 /* #region Footer */
 .footer {
-  padding: 100px 0;
+    padding: 100px 0;
     background: var(--primary-cl);
 }
 
 .footer-left {
     max-width: 264px;
+}
+
+.footer-logo {
+  display: block;
+  margin-bottom: 16px
 }
 
 .footer-slogan {
