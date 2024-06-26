@@ -255,6 +255,7 @@ a.contacts-link {
 }
 
 .team-member {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -273,6 +274,7 @@ a.contacts-link {
 
 /* #region Portfolio */
 .portfolio-caption {
+    margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
