@@ -145,6 +145,7 @@ img {
 
 /* #region Logo */
 .logo {
+  margin-right: 76px;
   font-family: var(--secondary-font);
   font-size: 18px;
   font-weight: 700;
@@ -167,7 +168,6 @@ img {
 .header-nav{
   display: flex;
   align-items: center;
-  gap: 76px;
   flex-grow: 1;
 }
 
@@ -231,6 +231,7 @@ img {
 }
 
 .hero-btn{
+  display: block;
   margin: 0 auto;
 }
 
@@ -241,10 +242,6 @@ img {
 /* #endregion */
 
 /* #region Features */
-.features {
-    padding-bottom: 60px;
-}
-
 .features-caption {
     margin-bottom: 8px;
     font-weight: 500;
@@ -273,7 +270,7 @@ img {
 
 .team-wrapper,
 .portfolio-wrapper {
-    padding: 32px 16px;
+    padding: 32px 0px;
 }
 
 .team-member {
@@ -297,6 +294,7 @@ img {
 /* #region Portfolio */
 .portfolio-list {
   --items: 3;
+  --row-indent: 48px;
 }
 
 .portfolio-wrapper {
@@ -327,16 +325,14 @@ img {
     background: var(--primary-cl);
 }
 
-.footer-left {
-    max-width: 264px;
-}
-
 .footer-logo {
-  display: block;
+  display: inline-block;
+  margin-right: 0;
   margin-bottom: 16px
 }
 
 .footer-slogan {
+    max-width: 264px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondary-cl);
