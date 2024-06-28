@@ -9,11 +9,16 @@
     --accent-cl-100: #4d5ae5;
     --accent-cl-200: #404bbf;
     --light-cl:  #ffffff;
+    --light-cl-100: #e7e9fc;
     --dark-cl: #434455;
 
     /* Others */
-    --line-height: line-height: 1.5;
-    --letter-spacing: letter-spacing: 0.02em;
+    /* --line-height: line-height: 1.5;
+    --letter-spacing: letter-spacing: 0.02em; */
+    --radius: 4px; 
+    --items: 4;
+    --col-indent: 24px;
+    --row-indent: var(--col-indent);
 
 }
 
@@ -53,14 +58,29 @@ button {
   font-family: inherit;
   color: currentColor;
   cursor: pointer;
+  border: none;
   text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 /* #endregion */
 
 /* #region Common */
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
 .team-title,
-.portfolio-title,
-.features-title {
+.portfolio-title {
     margin-bottom: 72px;
     font-size: 36px;
     line-height: 1.11;
@@ -87,26 +107,39 @@ button {
   overflow: hidden;
 }
 
-.cards {
+.btn {
     display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
+    min-width: 169px;
+    min-height: 56px;
+    padding: 16px 32px; 
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--light-cl);
+    background: var(--accent-cl-100);
+    border-radius: var(--radius);
 }
+/* #endregion */
 
-/* .cards-item {
-    width: 
-} */
+/* Card set */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--row-indent);
+  column-gap: var(--col-indent);
+}
+.card-set-item {
+  width: calc((100% - var(--col-indent) * (var(--items) - 1)) / var(--items));
+}
 /* #endregion */
 
 /* #region Header */
-.header > .container {
+.header {
+  border-bottom: 1px solid var(--light-cl-100);
+}
+.header .container {
   display: flex;
   align-items: center;
-}
-.container {
-  max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
 }
 /* #endregion */
 
@@ -120,7 +153,6 @@ button {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--accent-cl-100);
-  margin-right: 76px;
 
   .logo-dark {
   color: var(--primary-cl);
@@ -136,7 +168,7 @@ button {
 .header-nav{
   display: flex;
   align-items: center;
-  /* gap: 76px; */
+  gap: 76px;
   flex-grow: 1;
 }
 
@@ -147,12 +179,12 @@ button {
 }
 
 .nav-menu-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--primary-cl);
-  display: block;
-  padding: 24px 0;
 }
 
 .nav-menu-link:hover,
@@ -163,21 +195,14 @@ button {
 .header-contacts {
   display: flex;
   align-items: center;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--dark-cl);
 }
 
 .contacts-list {
   display: flex;
   gap: 40px; 
-}
-.contacts-item {
-  display: inline-block;
-}
-
-a.contacts-link {
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--dark-cl);
-  padding: 24px 0;
 }
 
 .contacts-link:hover, 
@@ -194,7 +219,7 @@ a.contacts-link {
 
 .hero-title {
     max-width: 496px;
-    margin: 0 auto 48px; 
+    margin: 0 auto 48px auto; 
     font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
@@ -206,17 +231,7 @@ a.contacts-link {
   margin: 0 auto;
 }
 
-.btn {
-    display: flex;
-    min-width: 169px;
-    min-height: 56px;
-    padding: 16px 32px; 
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: var(--light-cl);
-    background: var(--accent-cl-100);
-}
+
 
 .btn:hover, 
 .btn:focus {
@@ -250,6 +265,11 @@ a.contacts-link {
     background-color: var(--secondary-cl);
 }
 
+.team-item {
+    background: var(--light-cl);
+    border-radius: 0 0 4px 4px;
+}
+
 .team-wrapper {
     padding: 32px 16px;
 }
@@ -273,6 +293,10 @@ a.contacts-link {
 /* #endregion */
 
 /* #region Portfolio */
+.portfolio-list {
+  --items: 3;
+}
+
 .portfolio-caption {
     margin-bottom: 8px;
     font-weight: 500;
